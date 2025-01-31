@@ -39,7 +39,7 @@ export default function App() {
     await client.models.Expense.create({
       name: form.get("name"),
       amount: form.get("amount"),
-   
+    })
     event.target.reset();
   }
 
