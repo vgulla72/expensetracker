@@ -39,8 +39,9 @@ export default function App() {
     await client.models.Expense.create({
       name: form.get("name"),
       amount: form.get("amount"),
+    const totalAmount = expenses.reduce((acc, expense) => acc + parseFloat(expense.amount), 0);
     });
-
+    console.log(`Total Amount: $${totalAmount}`);
     event.target.reset();
   }
 
