@@ -106,7 +106,7 @@ export default function App() {
             {expenses.map((expense) => (
               <Flex
                 key={expense.id || expense.name}
-                direction="column"
+                direction="row"
                 justifyContent="center"
                 alignItems="center"
                 gap="2rem"
