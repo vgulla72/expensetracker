@@ -120,7 +120,7 @@ export default function App() {
                   <Heading level="3">{expense.name}</Heading>
                 </View>
                 <Text fontStyle="italic">${expense.amount}</Text>
-
+                <Text fontStyle="italic">${totalAmount}</Text>
                 <Button
                   variation="destructive"
                   onClick={() => deleteExpense(expense)}
