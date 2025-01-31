@@ -98,7 +98,7 @@ export default function App() {
           <Heading level={2}>Expenses</Heading>
           <Grid
             margin="3rem 0"
-            autoFlow="column"
+            autoFlow="row"
             justifyContent="center"
             gap="2rem"
             alignContent="center"
@@ -106,7 +106,7 @@ export default function App() {
             {expenses.map((expense) => (
               <Flex
                 key={expense.id || expense.name}
-                direction="row"
+                direction="column"
                 justifyContent="center"
                 alignItems="center"
                 gap="2rem"
