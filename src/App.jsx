@@ -39,9 +39,7 @@ export default function App() {
     await client.models.Expense.create({
       name: form.get("name"),
       amount: form.get("amount"),
-    const totalAmount = expenses.reduce((acc, expense) => acc + parseFloat(expense.amount), 0);
-    });
-    console.log(`Total Amount: $${totalAmount}`);
+   
     event.target.reset();
   }
 
@@ -120,7 +118,6 @@ export default function App() {
                   <Heading level="3">{expense.name}</Heading>
                 </View>
                 <Text fontStyle="italic">${expense.amount}</Text>
-                <Text fontStyle="italic">${totalAmount}</Text>
                 <Button
                   variation="destructive"
                   onClick={() => deleteExpense(expense)}
